@@ -1,0 +1,1 @@
+var dashboardApp = angular.module("myDashboard" , ['ui.bootstrap']);

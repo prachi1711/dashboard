@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<h3>Reminder Events</h3>
+</div>	
+<div class="modal-body">
+     <ul class="list-group" id="reminder_event_list">
+       <li class="list-group-item dialog_reminder_evt" id="selected_reminder_evt_{{x.eventId}}" ng-click="enableButtons(x)" ng-repeat="x in reminder_events">    		     	     	  
+    	    <h4 class="list-group-item-heading">Task Name: {{ x.taskName }}</h4>
+            <p class="list-group-item-text">Due Date: {{ x.dueDate }}</p> 
+            <p class="list-group-item-text">Priority: {{ x.priority }}</p>                
+  	    </li>  			  
+  	 </ul>    	 
+</div>
+<div class="modal-footer">      
+        <button class="btn btn-primary dropdown-toggle" id="menu1" data-toggle="dropdown" ng-disabled="disableReminderButton">Snooze
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="left: 230px;top: 95%;">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" ng-click="snooze('1')">1 minute</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" ng-click="snooze('2')">2 minutes</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#" ng-click="snooze('5')">5 minutes</a></li>          
+        </ul>          
+	<button class="btn btn-primary" ng-click="ok()" ng-disabled="disableReminderButton">Dismiss</button>
+	
+</div>
